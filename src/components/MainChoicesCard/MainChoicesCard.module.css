@@ -1,0 +1,25 @@
+.order_card {
+  @apply flex flex-col items-center shadow-order-card min-w-[150px] w-[150px] h-[200px] p-2 rounded-lg font-Poppins;
+}
+.order_photo {
+  @apply flex items-center justify-center border-[1px] border-[rgba(0,0,0,.2)] w-[110px] h-[110px] rounded-full;
+}
+.order_card img {
+  @apply max-w-[100px] p-1;
+}
+.order_card h2 {
+  @apply text-[12px] font-medium text-[#222] text-left w-full my-1;
+}
+.card_footer {
+  @apply mt-auto flex items-center justify-between w-full;
+}
+.order_add {
+  @apply bg-main-red text-default-white w-[20px] h-[20px] rounded-full flex items-center justify-center;
+}
+.order_add svg {
+  @apply h-[14px] w-[14px];
+}
+
+.sub_price {
+  @apply text-xs;
+}

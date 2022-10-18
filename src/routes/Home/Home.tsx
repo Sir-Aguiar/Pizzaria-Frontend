@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
 import { MdAdd } from "react-icons/md";
+import MainChoicesCard from "../../components/MainChoicesCard/MainChoicesCard";
 import "../../styles/home.css";
 const Home: React.FC = () => {
   const [orders_scroll, setScroll] = useState<number>();
@@ -27,20 +28,7 @@ const Home: React.FC = () => {
         <motion.div className="orders-container" ref={slider_container}>
           <motion.div drag="x" dragConstraints={{ right: 0, left: orders_scroll }} className="orders-slider">
             {[1, 2, 3, 4, 5].map((num) => (
-              <div className="order-card" key={num}>
-                <div className="order-photo">
-                  <img src="https://images.vectorhq.com/images/previews/3f6/burger-psd-429706.png" />
-                </div>
-                <h2>Lorem Ipsum Burger</h2>
-                <footer className="card-footer">
-                  <span className="price">
-                    R$ 12<span className="sub-price">,90</span>
-                  </span>
-                  <div className="order-add">
-                    <MdAdd />
-                  </div>
-                </footer>
-              </div>
+              <MainChoicesCard key={num}/>
             ))}
           </motion.div>
         </motion.div>
