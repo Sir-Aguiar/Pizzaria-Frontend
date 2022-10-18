@@ -1,7 +1,7 @@
 @tailwind components;
 @tailwind utilities;
 .opt_bar {
-  @apply fixed bottom-3 left-1/2 -translate-x-1/2 bg-[#E92222] w-[280px] h-[50px] rounded-b-[35px] rounded-t-[20px] flex justify-around px-2 py-1;
+  @apply fixed bottom-3 left-1/2 -translate-x-1/2 bg-main-red backdrop-blur w-[280px] h-[50px] rounded-b-[35px] rounded-t-[20px] flex justify-around px-2 py-1 bg-opacity-95;
 }
 .order_btn {
   @apply h-[60px] w-[60px] bg-yellow-400 rounded-full absolute -top-7 left-1/2 -translate-x-1/2 border-[3px] border-white hover:border-[2px] hover:scale-105 transition-all duration-200;
