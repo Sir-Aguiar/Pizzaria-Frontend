@@ -14,11 +14,11 @@
   @apply text-center text-[12px] font-MontserratA font-medium max-w-[300px];
 }
 .readable-content button {
-  @apply bg-main-yellow text-[#222] p-2 rounded-[25px] text-sm font-semibold font-Poppins w-[220px];
+  @apply bg-main-yellow text-[#3d3d3d] p-2 rounded-[25px] text-sm font-semibold font-Poppins w-[220px];
 }
 
 .main-orders {
-  @apply py-[15px] px-[25px] flex flex-col gap-[14px];
+  @apply py-[15px] flex flex-col gap-[14px];
 }
 .main-orders h1 {
   @apply text-center font-MontserratA font-medium;
@@ -27,7 +27,7 @@
   @apply overflow-hidden w-full h-[210px] flex items-center px-1
 }
 .orders-slider {
-  @apply flex gap-[15px];
+  @apply flex gap-[15px] px-4;
 }
 .order-card {
   @apply flex flex-col items-center shadow-order-card min-w-[150px] w-[150px] h-[200px] p-2 rounded-lg font-Poppins;
@@ -39,7 +39,7 @@
   @apply max-w-[100px] p-1;
 }
 .order-card h2 {
-  @apply text-[12px] font-medium text-[#222];
+  @apply text-[12px] font-medium text-[#222] text-left w-full my-1;
 }
 .card-footer {
   @apply mt-auto flex items-center justify-between w-full;
