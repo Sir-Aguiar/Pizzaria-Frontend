@@ -21,10 +21,11 @@
   @apply py-[15px] flex flex-col gap-[14px];
 }
 .main-orders h1 {
-  @apply text-center font-MontserratA font-medium;
+  @apply text-center font-MontserratA font-medium text-lg;
 }
+
 .orders-container {
-  @apply overflow-hidden w-full h-[210px] flex items-center px-1
+  @apply overflow-hidden w-full h-[210px] flex items-center px-1;
 }
 .orders-slider {
   @apply flex gap-[15px] px-4;
