@@ -11,7 +11,7 @@
   @apply flex flex-col gap-[12px] items-center;
 }
 .readable-content p {
-  @apply text-center text-[12px] font-MontserratA font-medium max-w-[300px];
+  @apply text-center text-[13px] font-MontserratA font-medium max-w-[300px];
 }
 .readable-content button {
   @apply bg-main-yellow text-[#3d3d3d] p-2 rounded-[25px] text-sm font-semibold font-Poppins w-[220px];
