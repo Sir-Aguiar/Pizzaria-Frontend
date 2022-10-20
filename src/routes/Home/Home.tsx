@@ -1,13 +1,19 @@
+import axios from "axios";
 import { motion } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
-import { MdAdd } from "react-icons/md";
 import MainChoicesCard from "../../components/MainChoicesCard/MainChoicesCard";
 import "../../styles/home.css";
 const Home: React.FC = () => {
   const [orders_scroll, setScroll] = useState<number>();
+  const [choices, setChoices] = useState<Item[]>([]);
   const slider_container = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    setScroll(((slider_container.current?.scrollWidth || 0) - (slider_container.current?.offsetWidth || 0) + 20) * -1);
+    axios.get("https://pizzaria-v2.herokuapp.com/get-items").then((res) => {
+      setChoices(res.data.items);
+      setScroll(
+        ((slider_container.current?.scrollWidth || 0) - (slider_container.current?.offsetWidth || 0) + 20) * -1
+      );
+    });
   }, []);
   return (
     <main className="home-container">
@@ -27,8 +33,8 @@ const Home: React.FC = () => {
         <h1>Principais escolhas</h1>
         <motion.div className="orders-container" ref={slider_container}>
           <motion.div drag="x" dragConstraints={{ right: 0, left: orders_scroll }} className="orders-slider">
-            {[1, 2, 3, 4, 5].map((num) => (
-              <MainChoicesCard key={num}/>
+            {choices.map((choice) => (
+              <MainChoicesCard info={choice} key={choice._id} />
             ))}
           </motion.div>
         </motion.div>

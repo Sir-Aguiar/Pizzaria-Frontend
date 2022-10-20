@@ -5,7 +5,7 @@
   @apply flex items-center justify-center border-[1px] border-[rgba(0,0,0,.2)] w-[110px] h-[110px] rounded-full;
 }
 .order_card img {
-  @apply max-w-[100px] p-1;
+  @apply max-w-[100px] max-h-[100px] p-1;
 }
 .order_card h2 {
   @apply text-[12px] font-medium text-[#222] text-left w-full my-1;

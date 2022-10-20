@@ -1,5 +1,5 @@
 .home-container {
-  @apply bg-default-white w-full min-h-full h-[200vh] overflow-y-auto;
+  @apply bg-default-white w-full min-h-[620px] h-[200vh] overflow-y-auto;
 }
 .image-fader {
   @apply bg-opacity-90 backdrop-blur-md bg-main-red text-default-white h-[375px] w-full flex flex-col items-center p-2 gap-[12px] shadow-fader;
