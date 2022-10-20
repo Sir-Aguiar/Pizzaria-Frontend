@@ -10,9 +10,11 @@ const Home: React.FC = () => {
   useEffect(() => {
     axios.get("https://pizzaria-v2.herokuapp.com/get-items").then((res) => {
       setChoices(res.data.items);
-      setScroll(
-        ((slider_container.current?.scrollWidth || 0) - (slider_container.current?.offsetWidth || 0) + 20) * -1
-      );
+      setTimeout(() => {
+        setScroll(
+          ((slider_container.current?.scrollWidth || 0) - (slider_container.current?.offsetWidth || 0) + 20) * -1
+        );
+      }, 1000);
     });
   }, []);
   return (
