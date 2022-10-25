@@ -8,8 +8,7 @@ export const WorkCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  transition: all 0.7s;
-  transform: translateX(-100%);
+  transition: all 0.5s;
   h1 {
     font-size: 14px;
   }

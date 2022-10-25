@@ -1,6 +1,7 @@
 .home-container {
   @apply bg-default-white w-full min-h-[620px] overflow-y-auto overflow-x-hidden;
 }
+
 .image-fader {
   @apply bg-opacity-90 backdrop-blur-md bg-main-red text-default-white h-[375px] w-full flex flex-col items-center p-2 gap-[12px] shadow-fader;
 }
@@ -35,9 +36,6 @@
   @apply h-[50%] text-center p-2 flex content-center opacity-0 transition-all duration-1000 blur-sm translate-x-[-100%];
 }
 
-.fade-show {
-  @apply opacity-100 blur-0 translate-x-0;
-}
 .about-container {
   @apply h-screen flex flex-col;
 }
@@ -45,14 +43,11 @@
   @apply h-[45%];
 }
 .work {
-  @apply h-[55%] font-MontserratA p-1 px-3 bg-main-red flex flex-col justify-around;
+  @apply h-[55%] font-MontserratA p-1 px-3 bg-main-red flex flex-col justify-around overflow-hidden;
 }
 .title {
-  @apply text-lg text-center transition-all duration-300 text-white  translate-x-[100%];
+  @apply text-lg text-center transition-all duration-300 text-white;
 }
 .subtitle {
-  @apply text-left text-xs text-white transition-all duration-500 blur-md translate-x-[100%];
-}
-.fade.fade-show {
-  @apply translate-x-0 blur-0;
+  @apply text-left text-xs text-white transition-all duration-500;
 }
