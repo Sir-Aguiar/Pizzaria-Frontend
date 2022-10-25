@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         "main-red": "#E92222",
         "main-yellow": "#FFCE1F",
-        "default-white": "#F5F5F5"
+        "default-white": "#F5F5F5",
+        "roset":"#F82A68"
       },
       fontFamily: {
         "Poppins": ['Poppins', "sans-serif"],

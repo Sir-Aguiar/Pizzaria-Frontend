@@ -36,18 +36,25 @@
   @apply h-[50%] text-center p-2 flex content-center opacity-0 transition-all duration-1000 blur-sm translate-x-[-100%];
 }
 
-.about-container {
+.about-area {
   @apply h-screen flex flex-col;
 }
+.work-container {
+  @apply flex flex-col justify-around items-center h-full bg-main-red p-2 text-white;
+}
 .map-container {
-  @apply h-[45%];
+  @apply h-[50%];
 }
-.work {
-  @apply h-[55%] font-MontserratA p-1 px-3 bg-main-red flex flex-col justify-around overflow-hidden;
+.map-container h1 {
+  @apply text-center font-MontserratA text-lg;
 }
-.title {
-  @apply text-lg text-center transition-all duration-300 text-white;
+.indicator {
+  @apply h-[5px] w-[5px] rounded-full bg-black;
 }
-.subtitle {
-  @apply text-left text-xs text-white transition-all duration-500;
+.indicator-active {
+  @apply w-[10px] bg-roset bg-opacity-75;
+}
+
+.work-ilustration {
+  @apply max-w-[200px];
 }
