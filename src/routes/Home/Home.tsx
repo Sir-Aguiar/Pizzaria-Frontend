@@ -5,10 +5,16 @@ import MainChoicesCard from "../../components/MainChoicesCard/MainChoicesCard";
 import "../../styles/home.css";
 import { WorkCard } from "../../styled/WorkCard";
 import { setFader } from "../../utils/observer-config";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 const Home: React.FC = () => {
   const [orders_scroll, setScroll] = useState<number>();
   const [choices, setChoices] = useState<Item[]>([]);
   const slider_container = useRef<HTMLDivElement>(null);
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: import.meta.env.VITE_APP_GOOGLE_API,
+  });
+  const defaultPosition = { lat: 40.805857281879284, lng: -74.14535546628153 };
   useEffect(() => {
     setFader(document.querySelectorAll<HTMLElement>(".fade"));
   }, []);
@@ -22,6 +28,7 @@ const Home: React.FC = () => {
       }, 1000);
     });
   }, []);
+
   return (
     <main className="home-container">
       <section className="top-content">
@@ -48,7 +55,20 @@ const Home: React.FC = () => {
       </section>
       <section className="about-area">
         <div className="map-container">
-          <h1 className="fade fade-right">Nossa localização</h1>
+          <h1 className="fade fade-right my-1">Nossa localização</h1>
+          <div className="h-[90%] w-full p-1 fade fade-right transition-all duration-300 ">
+            {isLoaded ? (
+              <GoogleMap
+                mapContainerStyle={{ width: "100%", height: "100%", border: "1px solid black", borderRadius: "5px" }}
+                center={defaultPosition}
+                zoom={15}
+              >
+                <Marker position={defaultPosition} label={{ text: "Lorem Ipsum",className:"place-marker" }}  />
+              </GoogleMap>
+            ) : (
+              "Nada"
+            )}
+          </div>
         </div>
         <div className="work-container">
           <h1 className="work-title fade fade-left">Lorem Ipsum Dolor</h1>

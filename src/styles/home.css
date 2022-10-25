@@ -37,13 +37,13 @@
 }
 
 .about-area {
-  @apply h-screen flex flex-col;
+  @apply min-h-screen h-[130vh] flex flex-col;
 }
 .work-container {
   @apply flex flex-col justify-around items-center h-full bg-main-red p-2 text-white;
 }
 .map-container {
-  @apply h-[50%];
+  @apply h-[75%] overflow-hidden;
 }
 .map-container h1 {
   @apply text-center font-MontserratA text-lg;
@@ -72,4 +72,7 @@
 }
 .card-slide {
   @apply min-w-full w-full h-full flex transition-all duration-300;
+}
+.place-marker {
+  @apply -mt-4
 }
