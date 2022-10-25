@@ -51,20 +51,50 @@ const Home: React.FC = () => {
           <h1 className="fade fade-right">Nossa localização</h1>
         </div>
         <div className="work-container">
-          <h1 className="text-center  font-Poppins text-[18px]  fade fade-left">Lorem Ipsum Dolor</h1>
-          <img src="box.png" className="work-ilustration fade fade-left" />
-          <WorkCard className="fade fade-right">
-            <div className="w-full flex items-center justify-center gap-3 my-2">
-              <div className="indicator"></div>
-              <div className="indicator"></div>
-              <div className="indicator indicator-active"></div>
+          <h1 className="work-title fade fade-left">Lorem Ipsum Dolor</h1>
+          <div className="work-slide">
+            <img src="box.png" className="work-ilustration fade fade-left" />
+            <div className="slider-container">
+              <div className="card-slide">
+                <WorkCard className="fade fade-right">
+                  <div className="indicators">
+                    <div className="indicator indicator-active"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla ullamcorper vestibulum.
+                    Nulla ac leo.
+                  </p>
+                  <button>Lorem Ipsum Dolor</button>
+                </WorkCard>
+                <WorkCard className="fade fade-right">
+                  <div className="indicators">
+                    <div className="indicator"></div>
+                    <div className="indicator indicator-active"></div>
+                    <div className="indicator"></div>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla ullamcorper vestibulum.
+                    Nulla ac leo.
+                  </p>
+                  <button>Lorem Ipsum Dolor</button>
+                </WorkCard>
+                <WorkCard className="fade fade-right">
+                  <div className="indicators">
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator indicator-active"></div>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla ullamcorper vestibulum.
+                    Nulla ac leo.
+                  </p>
+                  <button>Lorem Ipsum Dolor</button>
+                </WorkCard>
+              </div>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla ullamcorper vestibulum. Nulla
-              ac leo.
-            </p>
-            <button>Lorem Ipsum Dolor</button>
-          </WorkCard>
+          </div>
         </div>
       </section>
       <footer className="bg-[#222] h-[450px]"></footer>

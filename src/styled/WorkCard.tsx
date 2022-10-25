@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const WorkCard = styled.div`
   height: 150px;
   width: 250px;
+  min-width:250px;
   background-color: #f5f5f5;
   text-align: center;
   padding: 4px 16px;
