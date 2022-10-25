@@ -3,10 +3,16 @@ import { motion } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
 import MainChoicesCard from "../../components/MainChoicesCard/MainChoicesCard";
 import "../../styles/home.css";
+import { WorkCard } from "../../styled/WorkCard";
+import { FadeObserver } from "../../utils/observer-config";
 const Home: React.FC = () => {
   const [orders_scroll, setScroll] = useState<number>();
   const [choices, setChoices] = useState<Item[]>([]);
   const slider_container = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const fade_elements = document.querySelectorAll(".fade");
+    new FadeObserver(fade_elements);
+  }, []);
   useEffect(() => {
     axios.get("https://pizzaria-v2.herokuapp.com/get-items").then((res) => {
       setChoices(res.data.items);
@@ -41,6 +47,28 @@ const Home: React.FC = () => {
           </motion.div>
         </motion.div>
       </section>
+      <section className="about-container">
+        <div className="map-container">
+          <h1>Nossa localização</h1>
+        </div>
+        <div className="work">
+          <h1 className="title fade">Como nós trabalhamos</h1>
+          <h2 className="subtitle fade">
+            Donec ut efficitur sapien. Vivamus ultrices, nulla ut semper tristique, lectus ipsum vulputate nisl, vel
+            venenatis nisl erat gravida mauris.
+          </h2>
+          <WorkCard className="work-card fade">
+            <h1>Pague como quiser</h1>
+            <div>
+              <p>
+                Donec ut efficitur sapien. Vivamus ultrices, nulla ut semper tristique, lectus ipsum vulputate nisl, vel
+                venenatis nisl erat gravida mauris.
+              </p>
+            </div>
+          </WorkCard>
+        </div>
+      </section>
+      <footer className="bg-[#222] h-[450px]"></footer>
     </main>
   );
 };
