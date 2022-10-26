@@ -49,17 +49,17 @@
   @apply text-center font-MontserratA text-lg;
 }
 .indicator {
-  @apply h-[5px] w-[5px] rounded-full bg-black;
+  @apply h-[5px] w-[5px] rounded-full bg-white;
 }
 .indicator-active {
-  @apply w-[10px] bg-roset bg-opacity-75;
+  @apply w-[10px] bg-main-yellow bg-opacity-90;
 }
 
 .work-ilustration {
   @apply max-w-[200px];
 }
 .indicators {
-  @apply w-full flex items-center justify-center gap-3 my-2;
+  @apply w-full flex items-center justify-center gap-3;
 }
 .work-title {
   @apply text-center font-Poppins text-[18px];
@@ -70,9 +70,7 @@
 .slider-container {
   @apply flex w-[250px]  overflow-hidden mx-auto;
 }
-.card-slide {
-  @apply min-w-full w-full h-full flex transition-all duration-300;
-}
+
 .place-marker {
   @apply -mt-4
 }

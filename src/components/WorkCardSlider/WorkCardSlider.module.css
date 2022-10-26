@@ -1,0 +1,3 @@
+.card_slide {
+  @apply min-w-full w-full h-full flex transition-all duration-300;
+}
