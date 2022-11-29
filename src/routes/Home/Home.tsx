@@ -15,6 +15,9 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     setFader(document.querySelectorAll<HTMLElement>(".fade"));
+    axios.get('http://15.229.47.202:3333/').then(res => {
+      console.log(res.data)
+    })
   }, []);
   useEffect(() => {
     axios.get("https://pizzaria-v2.herokuapp.com/get-items").then((res) => {
