@@ -1,0 +1,10 @@
+{
+	"apps": [
+		{
+			"name": "pizzaria-frontend",
+			"script": "npx",
+			"interpreter": "none",
+			"args": "serve -s dist"
+		}
+	]
+}
